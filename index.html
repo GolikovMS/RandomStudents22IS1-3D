@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset=utf-8>
+    <title>My Site</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1 class="text-center">Рандомайзер учеников</h1>
+            <p id="clickStudent" class="text-center"></p>
+            <button type="button" onclick="clickRandomStudent()" class="btn btn-primary btn-block">Random</button>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    const students = [
+        'Афанасьев Степан Игоревич',
+        'Бахолдина Ирина Дмитриевна',
+        'Буренков Максим Максимович',
+        'Витман Вадим Олегович',
+        'Голиков Максим Сергеевич',
+        'Горохов Алексей Андреевич',
+        'Дубовой Александр Сергеевич',
+        'Егенмедов Максим Маратович',
+        'Жданов Артем Витальевич',
+        'Кожина Полина Андреевна',
+        'Колесников Алексей Дмитриевич',
+        'Кулешов Александр Артемович',
+        'Мамедов Заур Азерович',
+        'Митрофанов Алексей Андреевич',
+        'Мовчан Ярослав Сергеевич',
+        'Новиков Андрей Дмитриевич',
+        'Русак Софья Николаевна',
+        'Рысаева Ирина Артемовна',
+        'Сандара Бурбу-Доржу Орланович',
+        'Скворцов Максим Алексеевич',
+        'Толстяков Илья Артёмович',
+        'Фомин Александр Александрович',
+        'Хатагов Александр Сергеевич',
+        'Шаталов Александр Евгеньевич',
+        'Шкерина Анастасия Алексеевна'
+    ];
+
+    function clickRandomStudent() {
+        let rand = Math.floor(Math.random() * students.length);
+        document.getElementById("clickStudent").innerHTML = `${rand + 1}: ${students[rand]}`;
+    }
+</script>
+
+</body>
+</html>
